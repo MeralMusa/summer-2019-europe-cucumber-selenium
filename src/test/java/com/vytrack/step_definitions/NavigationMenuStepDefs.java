@@ -50,13 +50,8 @@ public class NavigationMenuStepDefs {
     }
 
     @When("the user navigates {string} {string}")
-
     public void the_user_navigates(String tab, String module) {
-        BrowserUtils.waitFor(2);
-
         new DashboardPage().navigateToModule(tab,module);
-
-        BrowserUtils.waitFor(2);
 
     }
 
@@ -68,6 +63,7 @@ public class NavigationMenuStepDefs {
 
         Assert.assertEquals(actualNumber,ePageNumber);
     }
+
 
 
 }
